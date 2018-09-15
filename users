@@ -1,0 +1,6 @@
+#!/bin/sh
+
+echo "Example of users commands..."
+
+# Show list of users
+cat /etc/passwd
