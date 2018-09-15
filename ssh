@@ -1,0 +1,14 @@
+#!/bin/sh
+
+echo "Create SSH Keep Alive"
+echo "Necesary for long processes, then you log in to your system and it disconect you, passed some time"
+
+# Open the file
+sudo vi /etc/ssh/ssh_config
+
+# Set the
+ServerAliveInterval 60
+
+# Then reconect to your server
+exit
+ssh root@232.232.....

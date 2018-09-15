@@ -1,6 +1,19 @@
 #!/bin/sh
 
-echo "Example of users commands..."
+echo "Example of users commands for Linux, mainly Unix"
 
 # Show list of users
 cat /etc/passwd
+
+# Create new user
+sudo adduser osm
+
+#Switch to new user
+su - osm
+
+# Logout from user
+exit
+
+# Postgres example
+sudo -u postgres -i
+exit

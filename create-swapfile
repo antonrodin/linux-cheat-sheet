@@ -1,0 +1,15 @@
+#!bin/sh
+
+echo "Create the swap file in your machine if your memory is low"
+echo "Ubuntu example"
+
+sudo fallocate -l 2G /swapfile
+sudo chmod 600 /swapfile
+sudo mkswap /swapfile
+
+# Output shouldbe:
+#
+# Setting up swapspace version 1, size = 2097148 KiB
+# no label, UUID=h32b3e10-0779-4865-9ea0-6e2af8f3kea9
+
+sudo swapon /swapfile

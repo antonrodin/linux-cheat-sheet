@@ -1,0 +1,29 @@
+#!/bin/sh
+
+echo "Open Street Maps Debuging"
+
+# The Instalation Guide for Ubuntu 16.04 can be found here
+https://www.linuxbabe.com/linux-server/openstreetmap-tile-server-ubuntu-16-04
+
+# Osm User
+su - osm
+
+# Check Renderer from osm user
+renderd -f -c /usr/local/etc/renderd.conf
+
+# The Renderer Demon, you can check the 'status' and find some errors
+sudo systemctl daemon-reload
+sudo systemctl start renderd
+sudo systemctl enable renderd
+sudo systemctl status renderd
+
+# The same can be done with Apache Server
+sudo systemctl stop apache2
+sudo systemctl start apache2
+sudo systemctl reload apache2
+sudo systemctl restart apache2
+
+# Also you can check logs here:
+cd /var/log/apache2/
+cd /var/log/httpd/
+
