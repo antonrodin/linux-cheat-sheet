@@ -1,0 +1,17 @@
+#!/bin/sh
+
+echo "HDD basic commands"
+
+# The basic command
+df
+
+# Show used and free space in human mode
+df -h
+
+# Show used space and more from directory
+du -h /var/html
+du -sh /var/html
+
+
+# More commands can be found here
+https://www.tecmint.com/check-linux-disk-usage-of-files-and-directories/
