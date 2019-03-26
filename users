@@ -6,13 +6,26 @@ echo "Example of users commands for Linux, mainly Unix"
 cat /etc/passwd
 
 # Create new user
-sudo adduser osm
+adduser osm
 
-#Switch to new user
+# Set password to user
+passwd osm
+
+# Switch to new user
 su - osm
 
 # Logout from user
 exit
+
+# Add user to wheel group
+# can do root shit with sudo command
+gpasswd -a osm wheel
+
+# Ownership of any folder
+chown -R osm:osm folder/
+
+# Change user home directory
+usermod -d /var/ftp/custom_name/ osm
 
 # Postgres example
 sudo -u postgres -i
