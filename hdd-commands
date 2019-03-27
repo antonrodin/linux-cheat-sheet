@@ -12,6 +12,10 @@ df -h
 du -h /var/html
 du -sh /var/html
 
+# Mount --bind
+# The folders will have the same content
+mount --bind /var/www/ /home/user/www
+umount /home/user/www/
 
 # More commands can be found here
 https://www.tecmint.com/check-linux-disk-usage-of-files-and-directories/
